@@ -49,6 +49,8 @@ public class SecurityConfig {
             .authorizeHttpRequests(authorize -> authorize
             .requestMatchers("/api/v1/auth/**")
             .permitAll()
+            .requestMatchers("/api/auth/accountVerification/**")
+            .permitAll()
             .anyRequest()
             .authenticated())
             .cors(Customizer.withDefaults())

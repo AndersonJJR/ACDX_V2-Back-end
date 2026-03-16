@@ -54,7 +54,7 @@ public class AuthService {
 
         mailService.sendMail(new NotificationEmail("Por favor ative a sua conta",
          user.getEmail(), "Obrigado por se inscrever no nosso serviço, clique no link para validar seu email : " +
-        "http://localhost:8080/api/auth/accountVerification/" + token));
+        "http://localhost:8080/api/v1/auth/accountVerification/" + token));
     }
 
     private String generateVerificationToken(Users user){
@@ -81,14 +81,14 @@ public class AuthService {
 
     public DadosAutenticacao login(DadosLogin login){
         Authentication authentication = authenticationManager.authenticate(
-            new UsernamePasswordAuthenticationToken(login.username(),login.password()));
+            new UsernamePasswordAuthenticationToken(login.email(),login.password()));
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String token = jwtProvider.gerarToken(authentication);
             return DadosAutenticacao.builder()
             .authenticationToken(token)
             .refreshToken(refreshTokenService.geraRefreshToken().getToken())
             .expiresAt(Instant.now().plusMillis(jwtProvider.getJwtExpiracaoEmMillis()))
-            .username(login.username())
+            .username(login.email())
             .build();
     }
 
