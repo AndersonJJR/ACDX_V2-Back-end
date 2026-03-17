@@ -8,8 +8,7 @@ import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
 import org.springframework.stereotype.Service;
-
-import com.anderson.meu_projeto.model.Users;
+import org.springframework.security.core.userdetails.User;
 
 import lombok.RequiredArgsConstructor;
 
@@ -23,7 +22,7 @@ public class JwtProvider {
     private Long jwtExpirationInMillis;
     
     public String gerarToken(Authentication authentication){
-        Users principal = (Users) authentication.getPrincipal();
+        User principal = (User) authentication.getPrincipal();
         return gerarTokenComNome(principal.getUsername());
     }
 

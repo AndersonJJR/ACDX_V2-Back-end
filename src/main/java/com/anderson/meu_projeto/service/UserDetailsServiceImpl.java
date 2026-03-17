@@ -26,10 +26,10 @@ public class UserDetailsServiceImpl implements UserDetailsService{
     
     @Override
     @Transactional(readOnly = true)
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<Users> userOptional = repository.findByUsername(username);
-        Users user = userOptional.orElseThrow(() -> new UsernameNotFoundException("Não existe usuário com esse nome: " +
-            username
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        Optional<Users> userOptional = repository.findByEmail(email);
+        Users user = userOptional.orElseThrow(() -> new UsernameNotFoundException("Não existe usuário com esse email: " +
+            email
         ));
 
         return new User(user.getUsername(), user.getPassword(), user.getEnabled(), true , true , true , getAuthorities("USER"));

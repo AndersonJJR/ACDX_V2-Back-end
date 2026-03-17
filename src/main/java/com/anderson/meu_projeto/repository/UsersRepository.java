@@ -11,5 +11,7 @@ import com.anderson.meu_projeto.model.Users;
 public interface UsersRepository extends JpaRepository<Users, Long>{
 
     Optional<Users> findByUsername(String nome);
+
+    Optional<Users> findByEmail(String email);
     
 }
