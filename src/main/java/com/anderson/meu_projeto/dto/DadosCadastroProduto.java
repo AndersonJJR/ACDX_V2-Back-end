@@ -9,9 +9,9 @@ public record DadosCadastroProduto(
         @NotBlank(message = "Nome não pode ser vazio") String nome,
         @NotNull(message = "Categoria não pode ser vazia") ProductsCategory categoria,
         @NotNull(message = "Custo unitário não pode ser nulo") Double custo_unitario,
-
+        
+        String descricao,
         Integer tempo_producao_minutos,
-
         Double preco_sugerido) {
     
 }

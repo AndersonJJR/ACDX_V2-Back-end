@@ -37,6 +37,7 @@ public class Products {
     private Double custo_unitario;
     private Integer tempo_producao_minutos;
     private Double preco_sugerido;
+    private String descricao;
 
     private Boolean ativo;
 
@@ -46,6 +47,7 @@ public class Products {
         this.custo_unitario = dados.custo_unitario();
         this.tempo_producao_minutos = dados.tempo_producao_minutos();
         this.preco_sugerido = dados.preco_sugerido();
+        this.descricao = dados.descricao();
         this.ativo = true;
     }
 
@@ -64,6 +66,9 @@ public class Products {
             this.tempo_producao_minutos = dados.tempo_producao_minutos();}
         if (dados.preco_sugerido() != null) {
             this.preco_sugerido = dados.preco_sugerido();
+        }
+        if (dados.descricao() != null) {
+            this.descricao = dados.descricao();
         }
     }
 }

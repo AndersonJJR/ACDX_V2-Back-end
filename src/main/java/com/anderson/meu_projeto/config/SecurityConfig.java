@@ -54,6 +54,7 @@ public class SecurityConfig {
             .anyRequest()
             .authenticated())
             .cors(Customizer.withDefaults())
+            .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .exceptionHandling(ex -> ex
                 .authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint())

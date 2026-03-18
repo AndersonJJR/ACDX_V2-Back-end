@@ -11,8 +11,10 @@ public record DadosAtualizarProduto(
     @NotNull
     ProductsCategory categoria,
     Double custo_unitario,
+    String descricao,
     Integer tempo_producao_minutos,
     Double preco_sugerido
+    
 ) {
     
 }
