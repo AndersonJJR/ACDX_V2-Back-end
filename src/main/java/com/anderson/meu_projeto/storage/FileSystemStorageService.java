@@ -19,7 +19,6 @@ import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
 @Service
-@AllArgsConstructor
 public class FileSystemStorageService implements StorageService{
     
     private final Path rootLocation;
