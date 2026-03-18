@@ -1,10 +1,13 @@
 package com.anderson.meu_projeto.storage;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
+
+import lombok.AllArgsConstructor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,10 +19,12 @@ import java.nio.file.StandardCopyOption;
 import java.util.stream.Stream;
 
 @Service
+@AllArgsConstructor
 public class FileSystemStorageService implements StorageService{
     
     private final Path rootLocation;
 
+    
     public FileSystemStorageService(StorageProperties properties){
         if (properties.getLocation().trim().length() == 0){
             throw new StorageException("File upload location can not be Empty.");

@@ -13,10 +13,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.anderson.meu_projeto.controller.FileUploadController;
 import com.anderson.meu_projeto.storage.StorageService;
 
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class ImageService {
     
     private final StorageService storageService;
