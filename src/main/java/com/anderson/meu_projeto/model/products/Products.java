@@ -39,6 +39,8 @@ public class Products {
     private Double preco_sugerido;
     private String descricao;
 
+    private String imagemUrl;
+
     private Boolean ativo;
 
     public Products(DadosCadastroProduto dados){
@@ -53,6 +55,14 @@ public class Products {
 
     public void desabilitar() {
         this.ativo = false;
+    }
+
+    public void habilitar() {
+        this.ativo = true;
+    }
+
+    public void atualizarImagem(String imagemUrl){
+        this.imagemUrl = imagemUrl;
     }
 
     public void atualizarDados(DadosAtualizarProduto dados) {
@@ -71,4 +81,6 @@ public class Products {
             this.descricao = dados.descricao();
         }
     }
+
+    
 }

@@ -51,6 +51,8 @@ public class SecurityConfig {
             .permitAll()
             .requestMatchers("/api/auth/accountVerification/**")
             .permitAll()
+            .requestMatchers(org.springframework.http.HttpMethod.GET, "/api/v1/image/files/**")
+            .permitAll()
             .anyRequest()
             .authenticated())
             .cors(Customizer.withDefaults())

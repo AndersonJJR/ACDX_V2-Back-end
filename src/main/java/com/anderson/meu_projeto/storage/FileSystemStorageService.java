@@ -1,13 +1,11 @@
 package com.anderson.meu_projeto.storage;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import lombok.AllArgsConstructor;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,14 +31,14 @@ public class FileSystemStorageService implements StorageService{
     }
 
     @Override
-    public void store(MultipartFile file){
+    public void store(MultipartFile file , String nome){
         try{
             if (file.isEmpty()){
                 throw new StorageException("Failed to store empty file.");
             }
 
             Path destinationFile = this.rootLocation.resolve(
-                Paths.get(file.getOriginalFilename())).normalize().toAbsolutePath();
+                Paths.get(nome)).normalize().toAbsolutePath();
             
             if (!destinationFile.getParent().equals(this.rootLocation.toAbsolutePath())) {
                 throw new StorageException("Cannot store file outside current directory.");

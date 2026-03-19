@@ -47,7 +47,7 @@ public class ImageService {
 
     public String handleFileUpload(MultipartFile file, RedirectAttributes redirectAttributes){
 
-        storageService.store(file);
+        storageService.store(file , null);
         redirectAttributes.addFlashAttribute("message ",
             "You successfully uploaded" + file.getOriginalFilename() + "!"
          );
