@@ -43,6 +43,8 @@ public class Products {
 
     private Boolean ativo;
 
+    private String imageUrl;
+
     public Products(DadosCadastroProduto dados){
         this.nome = dados.nome();
         this.categoria = dados.categoria();
