@@ -41,6 +41,8 @@ public class Products {
 
     private Boolean ativo;
 
+    private String imageUrl;
+
     public Products(DadosCadastroProduto dados){
         this.nome = dados.nome();
         this.categoria = dados.categoria();
@@ -53,6 +55,10 @@ public class Products {
 
     public void desabilitar() {
         this.ativo = false;
+    }
+
+    public void atualizarImagem(String imageUrl){
+        this.imageUrl = imageUrl;
     }
 
     public void atualizarDados(DadosAtualizarProduto dados) {
