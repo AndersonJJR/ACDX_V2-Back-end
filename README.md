@@ -150,7 +150,7 @@ CREATE DATABASE meu_projeto_db;
 
 ```text
 spring.datasource.url=jdbc:mysql://${DB_HOST}/${DB_NAME}
-spring.datasource.username=${DB_NAME}
+spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
 
 spring.jpa.hibernate.ddl-auto=update
