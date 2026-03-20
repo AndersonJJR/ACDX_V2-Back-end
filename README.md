@@ -127,8 +127,8 @@ meu_projeto/
 ### Clonar o repositório
 
 ```bash
-git clone https://github.com/AndersonJJR/meu_projeto.git
-cd meu_projeto
+git clone https://github.com/AndersonJJR/ACDX_V2-Back-end.git
+cd ACDX_V2-Back-end
 ```
 
 ---
