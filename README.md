@@ -28,7 +28,7 @@ O projeto foi criado como parte de um processo de estudo em desenvolvimento full
 
 O front-end da aplicação está disponível no repositório:
 
-👉 **Front-end:** [https://github.com/AndersonJJR/acdx-teste](https://github.com/AndersonJJR/acdx-teste)
+👉 **Front-end:** [https://github.com/AndersonJJR/ACDX V2-Front-End](https://github.com/AndersonJJR/ACDX_V2-Front-End)
 
 ---
 
@@ -164,7 +164,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 - Este back-end foi pensado para funcionar em conjunto com o projeto front-end disponível em:
 
-👉 (https://github.com/AndersonJJR/acdx-teste)
+👉 (https://github.com/AndersonJJR/ACDX_V2-Front-End)
 
 ### Fluxo esperado da aplicação:
 
@@ -205,7 +205,6 @@ spring.jpa.properties.hibernate.format_sql=true
 
 <div align="center">
 
-<!-- Substitua a URL abaixo pela sua imagem de perfil ou foto -->
 <img src="https://avatars.githubusercontent.com/u/206952189?v=4" width="100px" style="border-radius: 50%;" alt="Foto do autor"/>
 
 **Anderson JJR**
