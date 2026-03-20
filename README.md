@@ -74,7 +74,7 @@ O front-end da aplicação está disponível no repositório:
 A aplicação segue uma estrutura típica de projetos back-end com separação de responsabilidades, facilitando manutenção, testes e evolução do código.
 
 ```bash
-meu_projeto/
+ACDX_V2-Back-end/
 ├── src/
 │   ├── main/
 │   │   ├── java/
